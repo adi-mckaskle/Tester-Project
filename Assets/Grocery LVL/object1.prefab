@@ -110,7 +110,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3121374264099315882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c6d0abcb6ea1d542a8ecd8be8228c73, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e94bc64f52906d49829472e9af31a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeDestroyer
   aliveTimer: 5
