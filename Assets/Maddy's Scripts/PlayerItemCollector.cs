@@ -7,12 +7,7 @@ public class PlayerItemCollector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventoryController = FindFirstObjectOfType<InventoryController>();
-    }
-
-    private T FindFirstObjectOfType<T>()
-    {
-        throw new NotImplementedException();
+        inventoryController = FindAnyObjectByType<InventoryController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,7 +15,7 @@ public class PlayerItemCollector : MonoBehaviour
         if (collision.CompareTag("Item"))
         {
             Item item = collision.GetComponent<Item>();
-            if (item != null)
+            if (item == null)
             {
                 //Add item inventory
                 bool itemAdded = inventoryController.AddItem(collision.gameObject);
