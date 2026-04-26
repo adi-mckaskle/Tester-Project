@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Quest
   questID: 34ceac32-a610-41af-9ca1-18e3cc532406
   questName: Collect Carrots
-  description: We must collect 5 carrots to make soup!
+  description: We must collect 5 carrots to make our soup!
   objectives:
   - objectiveID: 1
     description: Collect 5 Carrots

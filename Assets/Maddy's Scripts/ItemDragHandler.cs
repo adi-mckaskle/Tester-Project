@@ -64,6 +64,10 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
         else
         {
+            //If where we're dropping is not within the inventory
+            //Drop our item
+            
+            //Else
             //No slot under drop point
             transform.SetParent(originalParent);
         }
