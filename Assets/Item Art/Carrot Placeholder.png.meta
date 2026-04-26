@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 87a9941213889ce4b8e7b7db25d30071
+guid: d81b0c77f6c922845abf714bf504b3fa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2109694941929238095
-    second: dogplayer_0
+      213: 2757318322150923650
+    second: Carrot Placeholder_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 81
+  spritePixelsToUnits: 75
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dogplayer_0
+      name: Carrot Placeholder_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 0
-        width: 170
-        height: 192
+        width: 76
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4e612e3f54274d10800000000000000
-      internalID: 2109694941929238095
+      spriteID: 28d5b74b766f34620800000000000000
+      internalID: 2757318322150923650
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dogplayer_0: 2109694941929238095
+      Carrot Placeholder_0: 2757318322150923650
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

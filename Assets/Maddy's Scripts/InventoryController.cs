@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
+    private ItemDictionary itemDictionary;
+    
     public GameObject inventoryPanel;
     public GameObject slotPrefab;
     public int slotCount;
@@ -16,6 +18,8 @@ public class InventoryController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        itemDictionary = FindAnyObjectByType<ItemDictionary>();
+       
         RebuildItemCounts();
         for (int i = 0; i < slotCount; i++)
         {
