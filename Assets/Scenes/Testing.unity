@@ -1703,9 +1703,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: NPC Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 14c8df316d001f145b87599aa7b280a7, type: 2}
-  m_sharedMaterial: {fileID: -17331630197449192, guid: 14c8df316d001f145b87599aa7b280a7,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1948,12 +1947,12 @@ PrefabInstance:
     - target: {fileID: 7124986766204670140, guid: 85fe74b827877304284f352efbbec511,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 3.3623579
+      value: 3.47
       objectReference: {fileID: 0}
     - target: {fileID: 7124986766204670140, guid: 85fe74b827877304284f352efbbec511,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.6683517
+      value: -2.09
       objectReference: {fileID: 0}
     - target: {fileID: 7124986766204670140, guid: 85fe74b827877304284f352efbbec511,
         type: 3}
@@ -3137,9 +3136,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dialogue goes here...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 14c8df316d001f145b87599aa7b280a7, type: 2}
-  m_sharedMaterial: {fileID: -17331630197449192, guid: 14c8df316d001f145b87599aa7b280a7,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
