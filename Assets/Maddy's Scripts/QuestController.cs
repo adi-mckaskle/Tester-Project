@@ -25,6 +25,7 @@ public class QuestController : MonoBehaviour
         
         activateQuests.Add(new QuestProgress(quest));
 
+        CheckInventoryForQuests();
         questUI.UpdateQuestUI();
     }
 

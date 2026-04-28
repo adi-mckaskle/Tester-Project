@@ -15,4 +15,18 @@ public class NPCDialogue : ScriptableObject
     public AudioClip voicesound;
     public float voicePitch = 1f;
 
+
+    public int questInProgressIndex; //What they say when quest is in progress
+    public int questCompletedIndex; //What they say when quest is completed
+    public Quest quest; //Quest NPC gives
+}
+
+[System.Serializable]
+
+public class DialogueChoice
+{
+    public int dialogueIndex;
+    public string[] choices; //Player response options
+    public int[] nextDialogueIndexes;
+    public bool[] givesQuest;
 }
