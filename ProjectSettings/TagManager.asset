@@ -58,6 +58,9 @@ TagManager:
   - name: Player
     uniqueID: 2154402361
     locked: 0
+  - name: Hedge
+    uniqueID: 1474905623
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1
