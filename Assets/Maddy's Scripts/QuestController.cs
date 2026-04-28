@@ -15,6 +15,7 @@ public class QuestController : MonoBehaviour
         else Destroy(gameObject);
 
         questUI = FindAnyObjectByType<QuestUI>();
+        InventoryController.Instance.OnInventoryChanged += CheckInventoryForQuests;
         //InventoryController.Instance.OnInventoryChanged += CheckInventoryForQuests();
     }
 

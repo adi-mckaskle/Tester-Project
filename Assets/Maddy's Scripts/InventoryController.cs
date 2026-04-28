@@ -15,6 +15,8 @@ public class InventoryController : MonoBehaviour
 
     public static InventoryController Instance { get; private set; }
     Dictionary<int, int> itemsCountCache = new();
+    public event UnityAction OnInventoryChanged;
+
     //public event Action OnInventoryChanged //Event to notify quest system
 
     private void Awake()
@@ -66,6 +68,7 @@ public class InventoryController : MonoBehaviour
 
         public void TriggerEvent()
     {
+        OnInventoryChanged?.Invoke();
         //OnInventoryChanged?.Invoke();
     }
 
