@@ -1156,6 +1156,9 @@ GameObject:
   m_Component:
   - component: {fileID: 351648253}
   - component: {fileID: 351648254}
+  - component: {fileID: 351648257}
+  - component: {fileID: 351648256}
+  - component: {fileID: 351648255}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1198,6 +1201,49 @@ MonoBehaviour:
   itemPrefabs:
   - {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
   - {fileID: 3901000699603613213, guid: 85fe74b827877304284f352efbbec511, type: 3}
+--- !u!114 &351648255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351648252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190eb243f2fb42e40b09c8e17d158ab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemDictionary
+  itemPrefabs: []
+--- !u!114 &351648256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351648252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77555b5557c0b0546ac5e17640ffd8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestUI
+  questListContent: {fileID: 0}
+  questEntryPrefab: {fileID: 0}
+  objectiveTextPrefab: {fileID: 0}
+  testQuest: {fileID: 0}
+  testQuestAmount: 0
+--- !u!114 &351648257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351648252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 692a76087a389064dbe38daf58bf9c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestController
+  activateQuests: []
 --- !u!1 &357046487
 GameObject:
   m_ObjectHideFlags: 0
