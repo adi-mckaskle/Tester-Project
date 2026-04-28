@@ -125,6 +125,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carrot
       objectReference: {fileID: 0}
+    - target: {fileID: 9146298646934017211, guid: e205fdcb17025ef469a8a77f9d259711,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -999534509667383064, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
     m_RemovedGameObjects: []
