@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class NPC : MonoBehaviour, IInteractable
 {
     public NPCDialogue dialogueData;
-    public GameObject dialoguePanel;
-    public TMP_Text dialogueText, nameText;
-
+    private DialogueController dialogueUI;
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
 
+    private void Start()
+    {
+        dialogueUI = DialogueController.Instance;
+    }
     public bool CanInteract()
     {
         return !isDialogueActive;
@@ -35,9 +37,8 @@ public class NPC : MonoBehaviour, IInteractable
         isDialogueActive = true;
         dialogueIndex = 0;
 
-        nameText.SetText(dialogueData.npcName);
-
-        dialoguePanel.SetActive(true);
+        dialogueUI.SetNPCInfop(dialogueData.npcName, dialogueData.npcPortrait);
+        dialogueUI.ShowDialogueUI(true);
 
         StartCoroutine(TypeLine());
     }
@@ -47,8 +48,8 @@ public class NPC : MonoBehaviour, IInteractable
         if(isTyping)
         {
            // Skip typing animation and show the full line
-            StopAllCoroutines();
-            dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
+            StopAllCoroutines(); 
+            dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
             isTyping = false;
         }
         else if(++dialogueIndex < dialogueData.dialogueLines.Length)
@@ -65,11 +66,11 @@ public class NPC : MonoBehaviour, IInteractable
     IEnumerator TypeLine()
     {
         isTyping = true;
-        dialogueText.SetText("");
+        dialogueUI.SetDialogueText("");
 
         foreach(char letter in dialogueData.dialogueLines[dialogueIndex])
         {
-            dialogueText.text += letter;
+            dialogueUI.SetDialogueText(dialogueUI.dialogueText.text += letter);
             yield return new WaitForSeconds(dialogueData.typingSpeed);
         }
 
@@ -86,7 +87,8 @@ public class NPC : MonoBehaviour, IInteractable
     {
         StopAllCoroutines();
         isDialogueActive = false;
-        dialogueText.SetText("");
-        dialoguePanel.SetActive(false);
+        dialogueUI.SetDialogueText("");
+        dialogueUI.ShowDialogueUI(false);
+
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - Good
   - Bad
   - Item
+  - Reward
   layers:
   - Default
   - TransparentFX
