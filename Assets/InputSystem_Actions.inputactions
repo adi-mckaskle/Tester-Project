@@ -22,7 +22,7 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -164,7 +164,7 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
