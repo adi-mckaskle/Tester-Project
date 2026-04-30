@@ -22,7 +22,7 @@ MonoBehaviour:
   - Thanks Daisy!
   - Aw man...
   - Well there's always next time.
-  autoProgressLines: 01
+  autoProgressLines: 01000000000000
   endDialogueLines: 00000000010001
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -33,7 +33,7 @@ MonoBehaviour:
     choices:
     - I'd love to!
     - Eh, no thanks.
-    nextDialogueIndexes: 0300000004000000
+    nextDialogueIndexes: 0300000005000000
     givesQuest: 
   questInProgressIndex: 0
   questCompletedIndex: 0
