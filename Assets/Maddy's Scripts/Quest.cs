@@ -12,7 +12,7 @@ public class Quest : ScriptableObject
     public List<QuestObjective> objectives;
 
     //Called when scriptable obj is created
-    private void OnEnable()
+    private void OnValidate()
     {
         if (string.IsNullOrEmpty(questID))
         {

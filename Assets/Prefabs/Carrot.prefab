@@ -114,12 +114,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5793878661223852922, guid: e205fdcb17025ef469a8a77f9d259711,
+        type: 3}
+      propertyPath: ID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5793878661223852922, guid: e205fdcb17025ef469a8a77f9d259711,
+        type: 3}
+      propertyPath: Name
+      value: Carrot
+      objectReference: {fileID: 0}
     - target: {fileID: 6256909614766466624, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5859083586626064994, guid: 8aa1e12d7ab9f4ddc83ba11d9c9a991a,
         type: 3}
+    - target: {fileID: 6256909614766466624, guid: e205fdcb17025ef469a8a77f9d259711,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_Name
@@ -132,7 +147,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -999534509667383064, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
-    m_RemovedGameObjects: []
+    - {fileID: 2594562738071285154, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 5313613036199164344, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6952746953737880774}
   m_SourcePrefab: {fileID: 100100000, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
+--- !u!1 &2874257871607738852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
+    type: 3}
+  m_PrefabInstance: {fileID: 4819333788392796599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6952746953737880774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2874257871607738852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b84a89bd08834459b8f03a83c21ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
