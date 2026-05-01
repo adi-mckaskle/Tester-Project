@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Hierarchy;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewNPCDialogue", menuName ="NPC Dialogue")]
@@ -18,9 +17,9 @@ public class NPCDialogue : ScriptableObject
 
     public DialogueChoice[] choices;
    
-    public int questInProgressIndex; //What they say when quest is in progress
-    public int questCompletedIndex; //What they say when quest is completed
-    public Quest quest; //Quest NPC gives
+   // public int questInProgressIndex; //What they say when quest is in progress
+    //public int questCompletedIndex; //What they say when quest is completed
+    //public Quest quest; //Quest NPC gives
 }
 
 [System.Serializable]

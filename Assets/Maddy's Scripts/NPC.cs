@@ -4,40 +4,25 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPC : MonoBehaviour, IInteractable
+
+public class NPC : MonoBehaviour
 {
     public NPCDialogue dialogueData;
     private DialogueController dialogueUI;
+
     private int dialogueIndex;
-    private bool isTyping, isDialogueActive;
+    private bool isTyping;
 
     private void Start()
     {
         dialogueUI = DialogueController.Instance;
     }
-    public bool CanInteract()
-    {
-        return !isDialogueActive;
-    }
 
-    public void Interact()
+    public void StartDialogue()
     {
-        if (isDialogueActive)
-        {
-            NextLine();
-        }
-        else
-        {
-            StartDialogue();
-        }
-    }
-
-    void StartDialogue()
-    {
-        isDialogueActive = true;
         dialogueIndex = 0;
-
-        dialogueUI.SetNPCInfop(dialogueData.npcName, dialogueData.npcPortrait);
+        
+        dialogueUI.SetNPCInfo(dialogueData.npcName, dialogueData.npcPortrait);
         dialogueUI.ShowDialogueUI(true);
 
         DisplayCurrentLine();
@@ -45,25 +30,23 @@ public class NPC : MonoBehaviour, IInteractable
 
     void NextLine()
     {
-        if(isTyping)
+        if (isTyping)
         {
-           // Skip typing animation and show the full line
-            StopAllCoroutines(); 
+            //skip typing anim and show the full line
+            StopAllCoroutines();
             dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
             isTyping = false;
         }
 
         //Clear Choices
         dialogueUI.ClearChoices();
-
         //Check endDialogueLines
-        if(dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
+        if (dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
         {
             EndDialogue();
             return;
         }
-
-        //Check if choices & display
+        //Check if choices and Display
         foreach (DialogueChoice dialogueChoice in dialogueData.choices)
         {
             if (dialogueChoice.dialogueIndex == dialogueIndex)
@@ -73,9 +56,8 @@ public class NPC : MonoBehaviour, IInteractable
             }
         }
 
-        if(++dialogueIndex < dialogueData.dialogueLines.Length)
+        if (++dialogueIndex + 1 < dialogueData.dialogueLines.Length)
         {
-            //If another line, type next line
             DisplayCurrentLine();
         }
         else
@@ -89,7 +71,7 @@ public class NPC : MonoBehaviour, IInteractable
         isTyping = true;
         dialogueUI.SetDialogueText("");
 
-        foreach(char letter in dialogueData.dialogueLines[dialogueIndex])
+        foreach (char letter in dialogueData.dialogueLines[dialogueIndex])
         {
             dialogueUI.SetDialogueText(dialogueUI.dialogueText.text += letter);
             yield return new WaitForSeconds(dialogueData.typingSpeed);
@@ -97,7 +79,7 @@ public class NPC : MonoBehaviour, IInteractable
 
         isTyping = false;
 
-        if(dialogueData.autoProgressLines.Length > dialogueIndex && dialogueData.autoProgressLines[dialogueIndex])
+        if (dialogueData.autoProgressLines.Length > dialogueIndex && dialogueData.autoProgressLines[dialogueIndex])
         {
             yield return new WaitForSeconds(dialogueData.autoProgressDelay);
             NextLine();
@@ -106,7 +88,7 @@ public class NPC : MonoBehaviour, IInteractable
 
     void DisplayChoices(DialogueChoice choice)
     {
-        for(int i = 0; i < choice.choices.Length; i++)
+        for (int i = 0; i < choice.choices.Length; i++)
         {
             int nextIndex = choice.nextDialogueIndexes[i];
             dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex));
@@ -118,7 +100,6 @@ public class NPC : MonoBehaviour, IInteractable
         dialogueIndex = nextIndex;
         dialogueUI.ClearChoices();
         DisplayCurrentLine();
-
     }
 
     void DisplayCurrentLine()
@@ -130,9 +111,7 @@ public class NPC : MonoBehaviour, IInteractable
     public void EndDialogue()
     {
         StopAllCoroutines();
-        isDialogueActive = false;
         dialogueUI.SetDialogueText("");
         dialogueUI.ShowDialogueUI(false);
-
     }
 }
