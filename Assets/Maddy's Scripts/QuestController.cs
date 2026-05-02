@@ -8,10 +8,12 @@ using UnityEngine.Events;
 public class QuestController : MonoBehaviour
 {
     public static QuestController Instance { get; private set; }
+    public static event UnityAction OnQuestUpdated; //For UI to listen to
+
     public List<QuestProgress> activateQuests = new();
     private QuestUI questUI;
 
-    private void Awake()
+    private void Start()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
@@ -24,7 +26,7 @@ public class QuestController : MonoBehaviour
     public void AcceptQuest(Quest quest)
     {
         if (IsQuestActive(quest.questID)) return;
-
+        
         activateQuests.Add(new QuestProgress(quest));
 
         CheckInventoryForQuests();
@@ -37,21 +39,23 @@ public class QuestController : MonoBehaviour
     {
         Dictionary<int, int> itemCounts = InventoryController.Instance.GetItemCounts();
 
-        foreach (QuestProgress quest in activateQuests)
+        foreach(QuestProgress quest in activateQuests)
         {
-            foreach (QuestObjective questObjective in quest.objectives)
+            foreach(QuestObjective questObjective in quest.objectives)
             {
                 if (questObjective.type != ObjectiveType.CollectItem) continue;
                 if (!int.TryParse(questObjective.objectiveID, out int itemID)) continue;
 
                 int newAmount = itemCounts.TryGetValue(itemID, out int count) ? Mathf.Min(count, questObjective.requiredAmount) : 0;
 
-                if (questObjective.currentAmount != newAmount)
+                if(questObjective.currentAmount != newAmount)
                 {
                     questObjective.currentAmount = newAmount;
                 }
             }
         }
+
+        if (questUI != null) questUI.UpdateQuestUI();
 
         questUI.UpdateQuestUI();
     }
