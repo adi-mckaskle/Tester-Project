@@ -50,17 +50,23 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
+  - name: Ground
     uniqueID: 145232093
     locked: 0
-  - name: Gameplay
-    uniqueID: 1087635889
+  - name: Walkbehind
+    uniqueID: 1886433781
     locked: 0
   - name: Player
+    uniqueID: 1474905623
+    locked: 0
+  - name: 'Walkinfront '
+    uniqueID: 1087635889
+    locked: 0
+  - name: Collision
     uniqueID: 2154402361
     locked: 0
-  - name: Hedge
-    uniqueID: 1474905623
+  - name: Decor
+    uniqueID: 4177324849
     locked: 0
   m_RenderingLayers:
   - Default

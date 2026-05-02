@@ -116,6 +116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5793878661223852922, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
+      propertyPath: ID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5793878661223852922, guid: e205fdcb17025ef469a8a77f9d259711,
+        type: 3}
       propertyPath: Name
       value: Carrot
       objectReference: {fileID: 0}
@@ -125,12 +130,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5859083586626064994, guid: 8aa1e12d7ab9f4ddc83ba11d9c9a991a,
         type: 3}
+    - target: {fileID: 6256909614766466624, guid: e205fdcb17025ef469a8a77f9d259711,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_Name
       value: Carrot
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2594562738071285154, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
