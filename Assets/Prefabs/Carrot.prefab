@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4819333788392796599
+--- !u!1001 &7921152719409294615
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -92,12 +92,12 @@ PrefabInstance:
     - target: {fileID: 3585135803341039346, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.865424
+      value: -2.9990396
       objectReference: {fileID: 0}
     - target: {fileID: 3585135803341039346, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.7177799
+      value: -2.9217782
       objectReference: {fileID: 0}
     - target: {fileID: 3585135803341039346, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
@@ -116,11 +116,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5793878661223852922, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
-      propertyPath: ID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5793878661223852922, guid: e205fdcb17025ef469a8a77f9d259711,
-        type: 3}
       propertyPath: Name
       value: Carrot
       objectReference: {fileID: 0}
@@ -130,48 +125,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5859083586626064994, guid: 8aa1e12d7ab9f4ddc83ba11d9c9a991a,
         type: 3}
-    - target: {fileID: 6256909614766466624, guid: e205fdcb17025ef469a8a77f9d259711,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_Name
       value: Carrot
       objectReference: {fileID: 0}
-    - target: {fileID: 9146298646934017211, guid: e205fdcb17025ef469a8a77f9d259711,
-        type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -999534509667383064, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
-    - {fileID: 2594562738071285154, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 5313613036199164344, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6952746953737880774}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
---- !u!1 &2874257871607738852 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
-    type: 3}
-  m_PrefabInstance: {fileID: 4819333788392796599}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6952746953737880774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2874257871607738852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39b84a89bd08834459b8f03a83c21ee9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript

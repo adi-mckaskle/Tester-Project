@@ -33,10 +33,12 @@ public class QuestObjective
         public bool IsCompleted => currentAmount >= requiredAmount;
     }
 
+
 public enum ObjectiveType { CollectItem, DefeatEnemy, ReachLocation, TalkNPC, Custom }
 
 [System.Serializable]
-    public class QuestProgress
+
+public class QuestProgress
     {
         public Quest quest;
         public List<QuestObjective> objectives;
@@ -59,7 +61,6 @@ public enum ObjectiveType { CollectItem, DefeatEnemy, ReachLocation, TalkNPC, Cu
                 });
             }
         }
-
         public bool IsCompleted => objectives.TrueForAll(o => o.IsCompleted);
 
         public string QuestID => quest.questID;

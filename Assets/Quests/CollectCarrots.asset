@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8d29c3f8d363847a1d3830a55ea7b1, type: 3}
   m_Name: CollectCarrots
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  questID: 34ceac32-a610-41af-9ca1-18e3cc532406
-  questName: Collect Carrots
-  description: We must collect 5 carrots to make our soup!
+  questID: C46e95c02-9ccd-4ec8-88b8-a5e75dc90fb8
+  questName: Collect Carrots!
+  description: Gather carrots for the soup!
   objectives:
-  - objectiveID: 0
-    description: Collect 5 Carrots
+  - objectiveID: 2
+    description: Collect 5 carrots
     type: 0
     requiredAmount: 5
     currentAmount: 0

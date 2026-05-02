@@ -2,14 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.Events;
 
 public class QuestController : MonoBehaviour
 {
     public static QuestController Instance { get; private set; }
+    public static event UnityAction OnQuestUpdated; //For UI to listen to
+
     public List<QuestProgress> activateQuests = new();
     private QuestUI questUI;
 
-    private void Awake()
+    private void Start()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
@@ -50,6 +54,8 @@ public class QuestController : MonoBehaviour
                 }
             }
         }
+
+        if (questUI != null) questUI.UpdateQuestUI();
 
         questUI.UpdateQuestUI();
     }
