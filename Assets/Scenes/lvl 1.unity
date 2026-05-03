@@ -9155,7 +9155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec07c3a7c1b7b24419f4dc06894dd823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
-  dialogueData: {fileID: 11400000, guid: ddacb88f643ce844889f8fa771afa5f9, type: 2}
+  dialogueData: {fileID: 11400000, guid: e8058ae396af4c14298297f16e44c1e6, type: 2}
+  dialoguePanel: {fileID: 762255956}
+  dialogueText: {fileID: 1378674374}
+  nameText: {fileID: 52629791}
+  portraitImage: {fileID: 393932865}
 --- !u!114 &2143491822
 MonoBehaviour:
   m_ObjectHideFlags: 0
