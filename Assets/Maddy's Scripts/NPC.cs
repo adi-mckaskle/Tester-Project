@@ -7,22 +7,21 @@ using UnityEngine.UI;
 public class NPC : MonoBehaviour
 {
     public NPCDialogue dialogueData;
-    public GameObject dialoguePanel;
-    public TMP_Text dialogueText, nameText;
-    public Image portraitImage;
-
+    private DialogueController dialogueUI;
     private int dialogueIndex;
     private bool isTyping;
 
-   
+    private void Start()
+    {
+        dialogueUI = DialogueController.Instance;
+    }
+
     public void StartDialogue()
     {
         dialogueIndex = 0;
 
-        nameText.SetText(dialogueData.npcName);
-        portraitImage.sprite = dialogueData.npcPortrait;
-
-        dialoguePanel.SetActive(true);
+        dialogueUI.SetNPCInfo(dialogueData.npcName, dialogueData.npcPortrait);
+        dialogueUI.ShowDialogueUI(true);
         //PauseController.SetPause(true);
 
         StartCoroutine(TypeLine());
@@ -34,7 +33,7 @@ public class NPC : MonoBehaviour
         {
             // Skip typing animation and show the full line
             StopAllCoroutines();
-            dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
+            dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
             isTyping = false;
         }
         else if(++dialogueIndex < dialogueData.dialogueLines.Length)
@@ -51,11 +50,11 @@ public class NPC : MonoBehaviour
     IEnumerator TypeLine()
     {
         isTyping = true;
-        dialogueText.SetText("");
+        dialogueUI.SetDialogueText("");
 
         foreach(char letter in dialogueData.dialogueLines[dialogueIndex])
         {
-            dialogueText.text += letter;
+            dialogueUI.SetDialogueText(dialogueUI.dialogueText.text += letter);
             //SoundEffectManager.PlayVoice(dialogueData.voiceSound, dialogueData.voicePitch);
             yield return new WaitForSeconds(dialogueData.typingSpeed);
         }
@@ -72,8 +71,8 @@ public class NPC : MonoBehaviour
     public void EndDialogue()
     {
         StopAllCoroutines();
-        dialogueText.SetText("");
-        dialoguePanel.SetActive(false);
+        dialogueUI.SetDialogueText("");
+        dialogueUI.ShowDialogueUI(false);
         //PauseController.SetPause(false);
     }
 }

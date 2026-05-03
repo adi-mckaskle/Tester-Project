@@ -19,8 +19,17 @@ MonoBehaviour:
   - Hi Daisy!
   - Gee! I sure could go for some chicken noodle soup!
   - Do you think you could make some for us?
-  autoProgressLines: 010100
+  - Thanks Daisy!
+  - Well... there's always next time...
+  autoProgressLines: 0101010000
+  endDialogueLines: 0000000100
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: {fileID: 0}
   voicePitch: 1
+  choices:
+  - dialogueIndex: 2
+    choices:
+    - Yes! I'd Love to!
+    - No, not today.
+    nextDialogueIndexes: 0300000004000000
