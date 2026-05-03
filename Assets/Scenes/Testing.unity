@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 187823028}
         m_TargetAssemblyTypeName: NPC, Assembly-CSharp
         m_MethodName: EndDialogue
         m_Mode: 1
@@ -1777,6 +1777,7 @@ GameObject:
   - component: {fileID: 429142039}
   - component: {fileID: 429142041}
   - component: {fileID: 429142040}
+  - component: {fileID: 429142042}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1796,7 +1797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78c81bc311054949b62d0fd0a1e7be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryController
-  inventoryPanel: {fileID: 0}
+  inventoryPanel: {fileID: 932889277}
   slotPrefab: {fileID: 105614685699647685, guid: aaedcdaa5393ab54d84ddc452c24788f,
     type: 3}
   slotCount: 24
@@ -1869,6 +1870,25 @@ MonoBehaviour:
   questEntryPrefab: {fileID: 7018591656411423087, guid: d5c517ed7e4e5504caa4b2e04565beb3,
     type: 3}
   objectiveTextPrefab: {fileID: 5085663704888178512, guid: 503c884cc600f35468bb903c9c505fc0,
+    type: 3}
+--- !u!114 &429142042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429142035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688d732644a17d240aac3ea7acc692f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueController
+  dialoguePanel: {fileID: 1961588477}
+  dialogueText: {fileID: 1122257830}
+  nameText: {fileID: 190451190}
+  portraitImage: {fileID: 1993465317}
+  choiceContainer: {fileID: 1040093494}
+  choiceButtonPrefab: {fileID: 6588959014474411803, guid: 9eb425100d419e348ae23641cf69f20e,
     type: 3}
 --- !u!1001 &533619586
 PrefabInstance:
