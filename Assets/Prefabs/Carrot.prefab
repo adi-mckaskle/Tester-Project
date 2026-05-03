@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 6256909614766466624, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
@@ -144,5 +144,27 @@ PrefabInstance:
     - {fileID: 2594562738071285154, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1872187067447266516}
   m_SourcePrefab: {fileID: 100100000, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
+--- !u!1 &643815372406828356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
+    type: 3}
+  m_PrefabInstance: {fileID: 7921152719409294615}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1872187067447266516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643815372406828356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b84a89bd08834459b8f03a83c21ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemDragHandler
