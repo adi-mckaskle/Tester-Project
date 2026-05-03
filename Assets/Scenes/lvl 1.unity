@@ -902,7 +902,6 @@ GameObject:
   m_Component:
   - component: {fileID: 285228298}
   - component: {fileID: 285228297}
-  - component: {fileID: 285228299}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -942,24 +941,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &285228299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285228296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688d732644a17d240aac3ea7acc692f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueController
-  dialoguePanel: {fileID: 762255956}
-  dialogueText: {fileID: 1378674374}
-  nameText: {fileID: 52629791}
-  portraitImage: {fileID: 393932865}
-  choiceContainer: {fileID: 0}
-  choiceButtonPrefab: {fileID: 0}
 --- !u!1 &309286609
 GameObject:
   m_ObjectHideFlags: 0
