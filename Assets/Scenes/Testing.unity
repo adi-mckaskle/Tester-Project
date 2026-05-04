@@ -1440,6 +1440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 354532923}
+  - component: {fileID: 354532924}
   m_Layer: 0
   m_Name: ItemDictionary
   m_TagString: Untagged
@@ -1462,6 +1463,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 429142037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &354532924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354532922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190eb243f2fb42e40b09c8e17d158ab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemDictionary
+  itemPrefabs:
+  - {fileID: 4434475117333186157, guid: a0cbb130e9ca73b4abc5336ebecf6cb2, type: 3}
 --- !u!1 &417928749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,10 +1671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429142037}
   - component: {fileID: 429142036}
-  - component: {fileID: 429142039}
-  - component: {fileID: 429142041}
-  - component: {fileID: 429142040}
-  - component: {fileID: 429142042}
+  - component: {fileID: 429142038}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1704,24 +1716,7 @@ Transform:
   - {fileID: 1535380958}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &429142039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429142035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 190eb243f2fb42e40b09c8e17d158ab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemDictionary
-  itemPrefabs:
-  - {fileID: 5793878661223852922, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
-  - {fileID: 235878519696448820, guid: 85fe74b827877304284f352efbbec511, type: 3}
-  - {fileID: 4434475117333186157, guid: a0cbb130e9ca73b4abc5336ebecf6cb2, type: 3}
-  - {fileID: 6984645814581877027, guid: d8584ed4047d977428417787d163e2cc, type: 3}
---- !u!114 &429142040
+--- !u!114 &429142038
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1733,47 +1728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 692a76087a389064dbe38daf58bf9c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestController
-  activateQuests:
-  - quest: {fileID: 11400000, guid: 0ba0a5f1e3d844d48a490bdae5e3b843, type: 2}
-    objectives: []
---- !u!114 &429142041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429142035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77555b5557c0b0546ac5e17640ffd8b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuestUI
-  questListContent: {fileID: 1187350495}
-  questEntryPrefab: {fileID: 7018591656411423087, guid: d5c517ed7e4e5504caa4b2e04565beb3,
-    type: 3}
-  objectiveTextPrefab: {fileID: 5085663704888178512, guid: 503c884cc600f35468bb903c9c505fc0,
-    type: 3}
-  testQuest: {fileID: 0}
-  testQuestAmount: 0
---- !u!114 &429142042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429142035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688d732644a17d240aac3ea7acc692f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueController
-  dialoguePanel: {fileID: 1961588477}
-  dialogueText: {fileID: 1122257830}
-  nameText: {fileID: 190451190}
-  portraitImage: {fileID: 1993465317}
-  choiceContainer: {fileID: 1040093494}
-  choiceButtonPrefab: {fileID: 6588959014474411803, guid: 9eb425100d419e348ae23641cf69f20e,
-    type: 3}
+  activateQuests: []
 --- !u!1 &535168529
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,7 +1961,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
+  m_Sprite: {fileID: -5386029977758480127, guid: cb93152fd292bf540b86f3b5787c3b89,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2191,8 +2146,6 @@ MonoBehaviour:
     type: 3}
   objectiveTextPrefab: {fileID: 5085663704888178512, guid: 503c884cc600f35468bb903c9c505fc0,
     type: 3}
-  testQuest: {fileID: 11400000, guid: 0ba0a5f1e3d844d48a490bdae5e3b843, type: 2}
-  testQuestAmount: 1
 --- !u!1 &852918095
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,7 +53,11 @@ public class NPC : MonoBehaviour
         string questID = dialogueData.quest.questID;
 
         //Future update add completing quest and handing in!
-        if (QuestController.Instance.IsQuestActive(questID))
+        if(QuestController.Instance.IsQuestCompleted(questID) || QuestController.Instance.IsQuestHandedIn(questID))
+        {
+            questState = QuestState.Completed;
+        }
+        else if (QuestController.Instance.IsQuestActive(questID))
         {
             questState = QuestState.InProgress;
         }
@@ -155,9 +159,20 @@ public class NPC : MonoBehaviour
 
     public void EndDialogue()
     {
+        if (questState == QuestState.Completed && !QuestController.Instance.IsQuestHandedIn(dialogueData.quest.questID))
+        {
+            HandleQuestCompletion(dialogueData.quest);
+        }
+
         StopAllCoroutines();
         dialogueUI.SetDialogueText("");
         dialogueUI.ShowDialogueUI(false);
         //PauseController.SetPause(false);
+    }
+
+    void HandleQuestCompletion(Quest quest)
+    {
+        //GiveReward
+        QuestController.Instance.HandInQuest(quest.questID);
     }
 }
