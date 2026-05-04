@@ -61,7 +61,7 @@ public class NPC : MonoBehaviour
             questState = QuestState.NotStarted;
         }
     }
-    
+
     void NextLine()
     {
         if (isTyping)
@@ -81,7 +81,8 @@ public class NPC : MonoBehaviour
             EndDialogue();
             return;
         }
-        //Check if choices & display them
+
+        //Check if choices & display
         foreach (DialogueChoice dialogueChoice in dialogueData.choices)
         {
             if (dialogueChoice.dialogueIndex == dialogueIndex)
