@@ -42,7 +42,6 @@ public class NPC : MonoBehaviour
 
         dialogueUI.SetNPCInfo(dialogueData.npcName, dialogueData.npcPortrait);
         dialogueUI.ShowDialogueUI(true);
-        //PauseController.SetPause(true);
 
         DisplayCurrentLine();
     }
@@ -52,7 +51,9 @@ public class NPC : MonoBehaviour
         if (dialogueData.quest == null) return;
 
         string questID = dialogueData.quest.questID;
-        if(QuestController.Instance.IsQuestActive(questID))
+
+        //Future update add completing quest and handing in!
+        if (QuestController.Instance.IsQuestActive(questID))
         {
             questState = QuestState.InProgress;
         }
