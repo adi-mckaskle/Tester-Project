@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
     public int ID;
+    public string Name;
     public int quantity = 1;
 
     private TMP_Text quantityText;
@@ -20,7 +20,7 @@ public class Item : MonoBehaviour
 
     public void UpdateQuantityDisplay()
     {
-        if(quantityText != null)
+        if (quantityText != null)
         {
             quantityText.text = quantity > 1 ? quantity.ToString() : "";
         }
@@ -47,5 +47,14 @@ public class Item : MonoBehaviour
         cloneItem.quantity = newQuantity;
         cloneItem.UpdateQuantityDisplay();
         return clone;
+    }
+
+    public virtual void PickUp()
+    {
+        Sprite itemIcon = GetComponent<Image>().sprite;
+        if (ItemPickupUIController.Instance != null)
+        {
+            ItemPickupUIController.Instance.ShowItemPickup(Name, itemIcon);
+        }
     }
 }

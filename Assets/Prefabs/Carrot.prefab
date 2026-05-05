@@ -161,7 +161,8 @@ PrefabInstance:
       value: Carrot
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 2594562738071285154, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
+    - {fileID: 0}
+    - {fileID: 5793878661223852922, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -169,6 +170,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1872187067447266516}
+    - targetCorrespondingSourceObject: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8290949107460854826}
   m_SourcePrefab: {fileID: 100100000, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
 --- !u!1 &643815372406828356 stripped
 GameObject:
@@ -188,3 +193,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b84a89bd08834459b8f03a83c21ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemDragHandler
+--- !u!114 &-8290949107460854826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643815372406828356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8fe5cea9a080b499920c248901cad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  ID: 0
+  Name: Carrot
+  quantity: 1
