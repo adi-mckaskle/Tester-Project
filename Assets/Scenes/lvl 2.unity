@@ -662,6 +662,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pasta
       objectReference: {fileID: 0}
+    - target: {fileID: 3121374264099315882, guid: 0ae93457f7d4cb4468828ec86b4ac89f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1142,10 +1147,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemSpawn
   RightSide: {fileID: 1024322241}
   items:
-  - {fileID: 1865869147}
-  - {fileID: 738050771}
-  - {fileID: 1437603156}
-  startDelay: -1
+  - {fileID: 3879429904313314730, guid: 42e98b59f0b9547aba8eaa32df83dacc, type: 3}
+  - {fileID: 3121374264099315882, guid: 0ae93457f7d4cb4468828ec86b4ac89f, type: 3}
+  - {fileID: 2837064445064097673, guid: d94fa99aeb0164b87b41b96ec4286df0, type: 3}
+  startDelay: -1.03
   repeatRate: 1
 --- !u!1 &1186355673
 GameObject:
@@ -1461,6 +1466,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chicken
       objectReference: {fileID: 0}
+    - target: {fileID: 3879429904313314730, guid: 42e98b59f0b9547aba8eaa32df83dacc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7337855127563687502, guid: 42e98b59f0b9547aba8eaa32df83dacc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1644,6 +1654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: peanut
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837064445064097673, guid: d94fa99aeb0164b87b41b96ec4286df0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
