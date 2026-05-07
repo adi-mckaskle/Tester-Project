@@ -53,7 +53,7 @@ public class NPC : MonoBehaviour
         string questID = dialogueData.quest.questID;
 
         //Future update add completing quest and handing in!
-        if(QuestController.Instance.IsQuestCompleted(questID) || QuestController.Instance.IsQuestHandedIn(questID))
+        if (QuestController.Instance.IsQuestCompleted(questID) || QuestController.Instance.IsQuestHandedIn(questID))
         {
             questState = QuestState.Completed;
         }
@@ -113,7 +113,7 @@ public class NPC : MonoBehaviour
         isTyping = true;
         dialogueUI.SetDialogueText("");
 
-        foreach(char letter in dialogueData.dialogueLines[dialogueIndex])
+        foreach (char letter in dialogueData.dialogueLines[dialogueIndex])
         {
             dialogueUI.SetDialogueText(dialogueUI.dialogueText.text += letter);
             //SoundEffectManager.PlayVoice(dialogueData.voiceSound, dialogueData.voicePitch);
@@ -122,7 +122,7 @@ public class NPC : MonoBehaviour
 
         isTyping = false;
 
-        if(dialogueData.autoProgressLines.Length > dialogueIndex && dialogueData.autoProgressLines[dialogueIndex])
+        if (dialogueData.autoProgressLines.Length > dialogueIndex && dialogueData.autoProgressLines[dialogueIndex])
         {
             yield return new WaitForSeconds(dialogueData.autoProgressDelay);
             NextLine();
@@ -151,7 +151,7 @@ public class NPC : MonoBehaviour
         DisplayCurrentLine();
     }
 
-        void DisplayCurrentLine()
+    void DisplayCurrentLine()
     {
         StopAllCoroutines();
         StartCoroutine(TypeLine());
@@ -172,7 +172,6 @@ public class NPC : MonoBehaviour
 
     void HandleQuestCompletion(Quest quest)
     {
-        //GiveReward
         RewardsController.Instance.GiveQuestReward(quest);
         QuestController.Instance.HandInQuest(quest.questID);
     }

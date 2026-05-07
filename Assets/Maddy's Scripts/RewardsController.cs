@@ -41,9 +41,14 @@ public class RewardsController : MonoBehaviour
 
         for (int i = 0; i < amount; i++)
         {
-            InventoryController.Instance.AddItem(itemPrefab);
+            if (!InventoryController.Instance.AddItem(itemPrefab))
             {
-                
+                GameObject dropItem = Instantiate(itemPrefab, transform.position + Vector3.down, Quaternion.identity);
+                dropItem.GetComponent<BounceEffect>().StartBounce();
+            }
+            else
+            {
+                itemPrefab.GetComponent<Item>().ShowPopUp();
             }
 
         }
