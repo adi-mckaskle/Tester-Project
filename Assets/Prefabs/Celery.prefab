@@ -114,6 +114,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6b1520ab3c3b6bc4fb5d9bbe7a9f3d7f,
         type: 3}
+    - target: {fileID: 6256909614766466624, guid: e205fdcb17025ef469a8a77f9d259711,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_Name
@@ -128,6 +133,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4340152331809216992}
+    - targetCorrespondingSourceObject: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2334451633348061555}
   m_SourcePrefab: {fileID: 100100000, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
 --- !u!1 &2805949921377894842 stripped
 GameObject:
@@ -150,3 +159,18 @@ MonoBehaviour:
   ID: 1
   Name: Celery
   quantity: 1
+--- !u!114 &2334451633348061555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2805949921377894842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6781088f83390f741ae0d09a935a5401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BounceEffect
+  bounceHeight: 0.3
+  bounceDuration: 0.4
+  bounceCount: 2
