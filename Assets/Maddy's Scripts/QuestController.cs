@@ -99,6 +99,7 @@ public class QuestController : MonoBehaviour
                 requiredItems[itemID] = objective.requiredAmount;
             }
         }
+        
         //Verify we have items
         Dictionary<int, int> itemCounts = InventoryController.Instance.GetItemCounts();
         foreach (var item in requiredItems)
@@ -109,7 +110,7 @@ public class QuestController : MonoBehaviour
                 return false;
             }
         }
-
+        
         //Remove required items from inventory
         foreach (var itemRequirement in requiredItems)
         {
