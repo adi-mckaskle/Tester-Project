@@ -60,7 +60,7 @@ public class InventoryController : MonoBehaviour
                 Item item = slot.currentItem.GetComponent<Item>();
                 if (item != null)
                 {
-                    itemsCountCache[item.ID] = itemsCountCache.GetValueOrDefault(item.ID, 0);
+                    itemsCountCache[item.ID] = itemsCountCache.GetValueOrDefault(item.ID, 0) + item.quantity;
                 }
             }
         }
@@ -75,6 +75,23 @@ public class InventoryController : MonoBehaviour
         Item itemToAdd = itemPrefab.GetComponent<Item>();
         if (itemToAdd == null) return false;
 
+        //Check if we have this item type in inventory
+        //foreach (Transform slotTranform in inventoryPanel.transform)
+        //{
+        //    Slot slot = slotTranform.GetComponent<Slot>();
+        //    if (slot != null && slot.currentItem != null)
+        //    {
+        //        Item slotItem = slot.currentItem.GetComponent<Item>();
+        //        if (slotItem != null && slotItem.ID == itemToAdd.ID)
+        //        {
+        //            //Same item, stack them
+        //            slotItem.AddToStack();
+        //            RebuildItemCounts();
+        //            return true;
+        //        }
+        //    }
+        //}
+
         //Look for empty slot
         foreach (Transform slotTranform in inventoryPanel.transform)
         {
@@ -88,10 +105,10 @@ public class InventoryController : MonoBehaviour
                 return true;
             }
         }
+
         Debug.Log("Inventory is full!");
         return false;
     }
-
 
     public void RemoveItemsFromInventory(int itemID, int amountToRemove)
     {
@@ -102,8 +119,15 @@ public class InventoryController : MonoBehaviour
             Slot slot = slotTransform.GetComponent<Slot>();
             if (slot?.currentItem?.GetComponent<Item>() is Item item && item.ID == itemID)
             {
-                int removed = Mathf.Min(amountToRemove);
+                int removed = Mathf.Min(amountToRemove, item.quantity);
+                //item.RemoveFromStack(removed);
                 amountToRemove -= removed;
+
+                if (item.quantity == 0)
+                {
+                    Destroy(slot.currentItem);
+                    slot.currentItem = null;
+                }
             }
         }
 

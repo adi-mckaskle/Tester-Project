@@ -16,7 +16,7 @@ MonoBehaviour:
   questName: CollectCarrots
   description: We must collect 5 carrots for our soup!
   objectives:
-  - objectiveID: 0
+  - objectiveID: 1
     description: Collect 5 Carrots
     type: 0
     requiredAmount: 5
