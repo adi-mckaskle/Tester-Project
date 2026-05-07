@@ -1535,7 +1535,7 @@ MonoBehaviour:
   popupPrefab: {fileID: 3799167881231443192, guid: a6a677e47d429f34f868334171342c42,
     type: 3}
   maxPopups: 5
-  popupDuration: 1
+  popupDuration: 3
 --- !u!1 &305089276
 GameObject:
   m_ObjectHideFlags: 0
