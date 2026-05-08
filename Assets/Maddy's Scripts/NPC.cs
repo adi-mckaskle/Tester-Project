@@ -167,7 +167,6 @@ public class NPC : MonoBehaviour
         StopAllCoroutines();
         dialogueUI.SetDialogueText("");
         dialogueUI.ShowDialogueUI(false);
-        //PauseController.SetPause(false);
     }
 
     void HandleQuestCompletion(Quest quest)
