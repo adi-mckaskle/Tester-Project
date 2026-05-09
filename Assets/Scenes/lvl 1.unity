@@ -6587,8 +6587,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1045029910}
   - component: {fileID: 1045029909}
-  - component: {fileID: 1045029913}
-  - component: {fileID: 1045029912}
   - component: {fileID: 1045029911}
   m_Layer: 0
   m_Name: Stove
@@ -6717,53 +6715,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.1539261, y: 2.6342523}
   m_EdgeRadius: 0
---- !u!114 &1045029912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045029908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 810546aa5348745779a5772744036fd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ConditionArea
-  actions: []
-  useCustomActions: 1
-  customActions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1045029913}
-        m_TargetAssemblyTypeName: NPC, Assembly-CSharp
-        m_MethodName: StartDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  happenOnlyOnce: 0
-  filterByTag: 0
-  filterTag: Player
-  frequency: 1
-  eventType: 0
---- !u!114 &1045029913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045029908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec07c3a7c1b7b24419f4dc06894dd823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPC
-  dialogueData: {fileID: 11400000, guid: 8e48de837c913f54abae2f8dac1568ea, type: 2}
 --- !u!1 &1067420076
 GameObject:
   m_ObjectHideFlags: 0
@@ -11517,7 +11468,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2143491821}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NPC, Assembly-CSharp
         m_MethodName: EndDialogue
         m_Mode: 1
@@ -12949,7 +12900,6 @@ GameObject:
   - component: {fileID: 2143491820}
   - component: {fileID: 2143491819}
   - component: {fileID: 2143491818}
-  - component: {fileID: 2143491821}
   - component: {fileID: 2143491822}
   m_Layer: 0
   m_Name: NPC
@@ -13079,19 +13029,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2143491821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143491817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec07c3a7c1b7b24419f4dc06894dd823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPC
-  dialogueData: {fileID: 11400000, guid: e8058ae396af4c14298297f16e44c1e6, type: 2}
 --- !u!114 &2143491822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13109,7 +13046,7 @@ MonoBehaviour:
   customActions:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2143491821}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NPC, Assembly-CSharp
         m_MethodName: StartDialogue
         m_Mode: 1
