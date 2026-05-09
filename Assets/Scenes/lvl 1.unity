@@ -1523,10 +1523,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 285228298}
-  - component: {fileID: 285228297}
   - component: {fileID: 285228299}
   - component: {fileID: 285228300}
   - component: {fileID: 285228301}
+  - component: {fileID: 285228302}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1534,23 +1534,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &285228297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285228296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c78c81bc311054949b62d0fd0a1e7be0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryController
-  inventoryPanel: {fileID: 1882462228}
-  slotPrefab: {fileID: 105614685699647685, guid: aaedcdaa5393ab54d84ddc452c24788f,
-    type: 3}
-  slotCount: 24
-  itemPrefabs: []
 --- !u!4 &285228298
 Transform:
   m_ObjectHideFlags: 0
@@ -1614,6 +1597,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2a50cb26dc6fe4da0b51f43eb0be95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RewardsController
+--- !u!114 &285228302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285228296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ec6512aabffc5459072d4e2d5b70e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryUI
+  slotPrefab: {fileID: 1882462228}
+  inventoryPanel: {fileID: 3933674051496773364, guid: aaedcdaa5393ab54d84ddc452c24788f,
+    type: 3}
 --- !u!1 &297469128
 GameObject:
   m_ObjectHideFlags: 0
