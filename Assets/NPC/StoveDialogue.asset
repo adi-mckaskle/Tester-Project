@@ -14,14 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Daisy
   npcPortrait: {fileID: 0}
-  dialogueLines: []
-  autoProgressLines: 
-  endDialogueLines: 
+  dialogueLines:
+  - Here's the recipe card!
+  - This seems easy to make.
+  - I should go and gather ingredients!
+  - I got my ingredients! Let's do this!
+  - A little bit of this...
+  - A little bit of that...
+  - Add a pinch of rosemary...
+  - And voila!
+  - Let's bring this to Donnie!
+  autoProgressLines: 010100
+  endDialogueLines: 000001
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: {fileID: 0}
   voicePitch: 1
-  choices: []
-  questInProgressIndex: 0
-  questCompletedIndex: 0
-  quest: {fileID: 0}
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - Grab the recipe card
+    nextDialogueIndexes: 01000000
+    givesQuest: 0001
+  questInProgressIndex: 2
+  questCompletedIndex: 7
+  quest: {fileID: 11400000, guid: fb3a8745ce435a948874559690e5806b, type: 2}

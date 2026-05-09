@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2228811756404902051
+--- !u!1001 &3462906239429167928
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,12 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2417142456309449332, guid: e205fdcb17025ef469a8a77f9d259711,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e5f35d56cbd602548ad4ae6278f3e7ba,
-        type: 3}
     - target: {fileID: 3585135803341039346, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_Pivot.x
@@ -92,12 +86,12 @@ PrefabInstance:
     - target: {fileID: 3585135803341039346, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4.6296487
+      value: -6.2716475
       objectReference: {fileID: 0}
     - target: {fileID: 3585135803341039346, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -6.2018576
+      value: -6.291674
       objectReference: {fileID: 0}
     - target: {fileID: 3585135803341039346, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
@@ -114,31 +108,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5793878661223852922, guid: e205fdcb17025ef469a8a77f9d259711,
-        type: 3}
-      propertyPath: ID
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6256909614766466624, guid: e205fdcb17025ef469a8a77f9d259711,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e5f35d56cbd602548ad4ae6278f3e7ba,
-        type: 3}
-    - target: {fileID: 6256909614766466624, guid: e205fdcb17025ef469a8a77f9d259711,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6256909614766466624, guid: e205fdcb17025ef469a8a77f9d259711,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1474905623
-      objectReference: {fileID: 0}
     - target: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_Name
-      value: Reward
+      value: Chicken Noodle Soup
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5793878661223852922, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
@@ -148,40 +121,40 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8583312058169568038}
+      addedObject: {fileID: 1317975618654172823}
     - targetCorrespondingSourceObject: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -3493310302576600000}
+      addedObject: {fileID: 4455319161020295135}
   m_SourcePrefab: {fileID: 100100000, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
---- !u!1 &8929662512849651952 stripped
+--- !u!1 &6128389900268260203 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
     type: 3}
-  m_PrefabInstance: {fileID: 2228811756404902051}
+  m_PrefabInstance: {fileID: 3462906239429167928}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8583312058169568038
+--- !u!114 &1317975618654172823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8929662512849651952}
+  m_GameObject: {fileID: 6128389900268260203}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca8fe5cea9a080b499920c248901cad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  ID: 6
-  Name: Reward
+  ID: 5
+  Name: Chicken Noodle Soup
   quantity: 1
---- !u!114 &-3493310302576600000
+--- !u!114 &4455319161020295135
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8929662512849651952}
+  m_GameObject: {fileID: 6128389900268260203}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39b84a89bd08834459b8f03a83c21ee9, type: 3}
