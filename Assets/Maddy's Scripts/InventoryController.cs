@@ -114,3 +114,35 @@ public class InventoryController : MonoBehaviour
         RebuildItemCounts();
     }
 }
+
+//public class InventoryController : MonoBehaviour
+//{
+//    public GameObject inventoryPanel;
+//    public GameObject slotPrefab;
+//    public ItemDictionary itemDictionary; // To look up prefabs/icons by ID
+
+//    private void Start()
+//    {
+//        // Subscribe to the manager's data changes
+//        InventoryManager.Instance.OnInventoryDataChanged += RefreshUI;
+//        RefreshUI();
+//    }
+//    public void RefreshUI()
+//    {
+//        // 1. Clear existing UI slots
+//        foreach (Transform child in inventoryPanel.transform)
+//        {
+//            Destroy(child.gameObject);
+//        }
+
+//        // 2. Rebuild UI based on Manager's data
+//        var currentItems = InventoryManager.Instance.GetItemCounts();
+//        foreach (var itemEntry in currentItems)
+//        {
+//            GameObject slot = Instantiate(slotPrefab, inventoryPanel.transform);
+//            // Use itemDictionary to get the visual prefab for itemEntry.Key (the ID)
+//            GameObject visualItem = Instantiate(itemDictionary.GetPrefab(itemEntry.Key), slot.transform);
+//            // Update quantity text in UI if necessary
+//        }
+//    }
+
