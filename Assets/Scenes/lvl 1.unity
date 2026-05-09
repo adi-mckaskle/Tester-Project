@@ -6734,7 +6734,7 @@ MonoBehaviour:
   customActions:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2143491821}
+      - m_Target: {fileID: 1045029913}
         m_TargetAssemblyTypeName: NPC, Assembly-CSharp
         m_MethodName: StartDialogue
         m_Mode: 1
