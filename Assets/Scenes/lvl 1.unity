@@ -296,11 +296,11 @@ Transform:
   m_GameObject: {fileID: 50000951}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.5065178, w: 0.8622296}
-  m_LocalPosition: {x: 2.9, y: -5.27, z: 0}
-  m_LocalScale: {x: 2.8692126, y: 1.3992579, z: 1}
+  m_LocalPosition: {x: 3.8060803, y: -3.7969685, z: 0}
+  m_LocalScale: {x: 2.8692122, y: 1.3992578, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1537550322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60.864}
 --- !u!1 &52629789
 GameObject:
@@ -9587,6 +9587,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 50000953}
   - {fileID: 1844604876}
   - {fileID: 70327635}
   - {fileID: 1018615788}
@@ -11378,6 +11379,7 @@ GameObject:
   - component: {fileID: 1882462232}
   - component: {fileID: 1882462231}
   - component: {fileID: 1882462230}
+  - component: {fileID: 1882462233}
   m_Layer: 5
   m_Name: InventoryPage
   m_TagString: Untagged
@@ -11466,6 +11468,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882462228}
   m_CullTransparentMesh: 1
+--- !u!114 &1882462233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882462228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ec6512aabffc5459072d4e2d5b70e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryUI
+  slotPrefab: {fileID: 105614685699647685, guid: aaedcdaa5393ab54d84ddc452c24788f,
+    type: 3}
+  inventoryPanel: {fileID: 1882462229}
 --- !u!1 &1907977513
 GameObject:
   m_ObjectHideFlags: 0
@@ -13550,4 +13567,3 @@ SceneRoots:
   - {fileID: 1377104572}
   - {fileID: 2095518818}
   - {fileID: 6810206576092156571}
-  - {fileID: 50000953}
