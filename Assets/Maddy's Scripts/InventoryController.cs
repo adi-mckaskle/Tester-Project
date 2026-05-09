@@ -17,8 +17,6 @@ public class InventoryController : MonoBehaviour
     Dictionary<int, int> itemsCountCache = new();
     public event UnityAction OnInventoryChanged;
 
-    //public event Action OnInventoryChanged //Event to notify quest system
-
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -75,23 +73,6 @@ public class InventoryController : MonoBehaviour
         Item itemToAdd = itemPrefab.GetComponent<Item>();
         if (itemToAdd == null) return false;
 
-        //Check if we have this item type in inventory
-        //foreach (Transform slotTranform in inventoryPanel.transform)
-        //{
-        //    Slot slot = slotTranform.GetComponent<Slot>();
-        //    if (slot != null && slot.currentItem != null)
-        //    {
-        //        Item slotItem = slot.currentItem.GetComponent<Item>();
-        //        if (slotItem != null && slotItem.ID == itemToAdd.ID)
-        //        {
-        //            //Same item, stack them
-        //            slotItem.AddToStack();
-        //            RebuildItemCounts();
-        //            return true;
-        //        }
-        //    }
-        //}
-
         //Look for empty slot
         foreach (Transform slotTranform in inventoryPanel.transform)
         {
@@ -120,7 +101,6 @@ public class InventoryController : MonoBehaviour
             if (slot?.currentItem?.GetComponent<Item>() is Item item && item.ID == itemID)
             {
                 int removed = Mathf.Min(amountToRemove, item.quantity);
-                //item.RemoveFromStack(removed);
                 amountToRemove -= removed;
 
                 if (item.quantity == 0)
