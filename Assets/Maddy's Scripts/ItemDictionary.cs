@@ -8,6 +8,9 @@ public class ItemDictionary : MonoBehaviour
     public List<Item> itemPrefabs;
     private Dictionary<int, GameObject> itemDictionary = new();
 
+
+
+
     //public List<Item> itemPrefabs;
     //private Dictionary<int, GameObject> itemDictionary;
    
