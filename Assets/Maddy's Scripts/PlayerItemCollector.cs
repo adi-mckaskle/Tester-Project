@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class PlayerItemCollector : MonoBehaviour
 {
-    private InventoryController inventoryController;
-    // Start is called before the first frame update
-    void Start()
-    {
-        inventoryController = FindAnyObjectByType<InventoryController>();
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Item"))
@@ -19,7 +12,7 @@ public class PlayerItemCollector : MonoBehaviour
             if (item != null)
             {
                 //Add item inventory
-                bool itemAdded = inventoryController.AddItem(collision.gameObject);
+                bool itemAdded = InventoryManager.Instance.AddItem(item.ID, item.quantity);
 
                 if (itemAdded)
                 {

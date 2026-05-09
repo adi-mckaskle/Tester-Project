@@ -5,17 +5,23 @@ using UnityEngine;
 public class ItemDictionary : MonoBehaviour
 {
     public static ItemDictionary Instance { get; private set; }
+    
     public List<Item> itemPrefabs;
     private Dictionary<int, GameObject> itemDictionary = new();
 
-
-
-
-    //public List<Item> itemPrefabs;
-    //private Dictionary<int, GameObject> itemDictionary;
-   
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Keeps it alive between levels
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
         itemDictionary = new Dictionary<int, GameObject>();
 
         //AutoIncrementIds

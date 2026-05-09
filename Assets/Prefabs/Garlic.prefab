@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5990350120981395022
+--- !u!1001 &4893519450906620356
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,21 +8,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -999534509667383064, guid: e205fdcb17025ef469a8a77f9d259711,
-        type: 3}
-      propertyPath: ID
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2417142456309449332, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_Type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2417142456309449332, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 79429069e7a00204787f0f7e4518f4cd,
+      objectReference: {fileID: -912498489993581376, guid: f5bd9fe735dd81743816effb090d872f,
         type: 3}
     - target: {fileID: 3585135803341039346, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
@@ -102,12 +97,12 @@ PrefabInstance:
     - target: {fileID: 3585135803341039346, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -41
+      value: -2.78
       objectReference: {fileID: 0}
     - target: {fileID: 3585135803341039346, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 361
+      value: 2.57
       objectReference: {fileID: 0}
     - target: {fileID: 3585135803341039346, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
@@ -128,7 +123,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 79429069e7a00204787f0f7e4518f4cd,
+      objectReference: {fileID: -912498489993581376, guid: f5bd9fe735dd81743816effb090d872f,
         type: 3}
     - target: {fileID: 6256909614766466624, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
@@ -138,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       propertyPath: m_Name
-      value: Garlic
+      value: Garlic 1
       objectReference: {fileID: 0}
     - target: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
@@ -146,7 +141,6 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 0}
     - {fileID: 5793878661223852922, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -154,26 +148,26 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7968711923877918472}
+      addedObject: {fileID: 2604995136230943775}
   m_SourcePrefab: {fileID: 100100000, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
---- !u!1 &3901000699603613213 stripped
+--- !u!1 &2804505371752591767 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7278622689290092627, guid: e205fdcb17025ef469a8a77f9d259711,
     type: 3}
-  m_PrefabInstance: {fileID: 5990350120981395022}
+  m_PrefabInstance: {fileID: 4893519450906620356}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7968711923877918472
+--- !u!114 &2604995136230943775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3901000699603613213}
+  m_GameObject: {fileID: 2804505371752591767}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca8fe5cea9a080b499920c248901cad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  ID: 2
+  ID: 3
   Name: Garlic
   quantity: 1
