@@ -4,27 +4,31 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [Serializable]
-public class InventorySlotData
+public class InventorySlot
 {
-    public int itemID;
-    public int quantity;
+    public int itemID = -1;
+    public int quantity = 0;
+
+    public bool IsEmpty => itemID == -1;
 }
+
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
+    public int maxSlots = 24; //How many boxes in the grid
+    public List<InventorySlot> slots = new List<InventorySlot>();
 
-    public List<InventorySlotData> playerItems = new();
-    public int maxSlots = 24;
-
-    public event UnityAction OnInventoryChanged;
+    public event UnityAction OnInventoryUpdated;
 
     private void Awake()
     {
+        // 4. THE PERSISTENCE LOGIC (Level Loop Fix)
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            InitializeInventory();
         }
         else
         {
@@ -32,42 +36,61 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public bool AddItem(int id, int qty)
+    private void InitializeInventory()
     {
-        // Stacking Logic: Check if we already have the item
-        foreach (var slot in playerItems)
+        slots.Clear();
+        for (int i = 0; i < maxSlots; i++)
         {
-            if (slot.itemID == id)
+            slots.Add(new InventorySlot());
+        }
+    }
+
+    public bool AddItem(int id, int amount)
+    {
+        // We skip the "Find existing ID" loop entirely.
+        // Instead, we just look for the first empty slot.
+        foreach (var slot in slots)
+        {
+            if (slot.IsEmpty)
             {
-                slot.quantity += qty;
-                OnInventoryChanged?.Invoke();
+                slot.itemID = id;
+                slot.quantity = amount;
+
+                OnInventoryUpdated?.Invoke();
                 return true;
             }
         }
 
-        // New Slot Logic
-        if (playerItems.Count < maxSlots)
-        {
-            playerItems.Add(new InventorySlotData { itemID = id, quantity = qty });
-            OnInventoryChanged?.Invoke();
-            return true;
-        }
-
-        Debug.Log("Inventory Full!");
+        Debug.Log("Inventory is full! No empty boxes available.");
         return false;
     }
 
-    public void RemoveItem(int id, int qty)
+    public void RemoveItem(int id, int amountToRemove)
     {
-        for (int i = playerItems.Count - 1; i >= 0; i--)
+        for (int i = 0; i < slots.Count; i++)
         {
-            if (playerItems[i].itemID == id)
+            if (amountToRemove <= 0) break;
+
+            if (slots[i].itemID == id)
             {
-                playerItems[i].quantity -= qty;
-                if (playerItems[i].quantity <= 0) playerItems.RemoveAt(i);
-                break;
+                int canRemove = Mathf.Min(slots[i].quantity, amountToRemove);
+                slots[i].quantity -= canRemove;
+                amountToRemove -= canRemove;
+
+                if (slots[i].quantity <= 0) slots[i].itemID = -1;
             }
         }
-        OnInventoryChanged?.Invoke();
+        OnInventoryUpdated?.Invoke();
+    }
+
+    public int GetTotalQuantity(int id)
+    {
+        int total = 0;
+        foreach (var slot in slots)
+        {
+            if (slot.itemID == id) total += slot.quantity;
+        }
+        return total;
     }
 }
+
