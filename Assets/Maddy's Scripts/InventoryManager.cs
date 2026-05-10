@@ -65,7 +65,26 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    public void RemoveItem(int id, int amountToRemove)
+    public Dictionary<int, int> GetItemCounts()
+    {
+        Dictionary<int, int> counts = new Dictionary<int, int>();
+        foreach (var slot in slots)
+        {
+            if (slot.IsEmpty) continue;
+
+            if (counts.ContainsKey(slot.itemID))
+            {
+                counts[slot.itemID] += slot.quantity;
+            }
+            else
+            {
+                counts[slot.itemID] = slot.quantity;
+            }
+        }
+        return counts;
+    }
+
+    public void RemoveItemsFromInventory(int id, int amountToRemove)
     {
         for (int i = 0; i < slots.Count; i++)
         {

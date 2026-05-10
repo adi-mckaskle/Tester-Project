@@ -12,11 +12,23 @@ public class QuestController : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
 
         questUI = FindAnyObjectByType<QuestUI>();
-        InventoryController.Instance.OnInventoryChanged += CheckInventoryForQuests;
+
+        if (InventoryManager.Instance != null)
+        {
+            InventoryManager.Instance.OnInventoryUpdated += CheckInventoryForQuests;
+        }
     }
 
     public void AcceptQuest(Quest quest)
@@ -26,14 +38,17 @@ public class QuestController : MonoBehaviour
         activateQuests.Add(new QuestProgress(quest));
 
         CheckInventoryForQuests();
-        questUI.UpdateQuestUI();
+
+        //safety check in case UI is hidden
+        if (questUI == null) questUI = FindAnyObjectByType<QuestUI>();
+        questUI?.UpdateQuestUI();
     }
 
     public bool IsQuestActive(string questID) => activateQuests.Exists(q => q.QuestID == questID);
 
     public void CheckInventoryForQuests()
     {
-        Dictionary<int, int> itemCounts = InventoryController.Instance.GetItemCounts();
+        Dictionary<int, int> itemCounts = InventoryManager.Instance.GetItemCounts();
 
         foreach (QuestProgress quest in activateQuests)
         {
@@ -50,8 +65,9 @@ public class QuestController : MonoBehaviour
                 }
             }
         }
-
-        questUI.UpdateQuestUI();
+        
+        if (questUI == null) questUI = FindAnyObjectByType<QuestUI>();
+        questUI?.UpdateQuestUI();
     }
 
     public bool IsQuestCompleted(string questID)
@@ -75,7 +91,9 @@ public class QuestController : MonoBehaviour
         {
             handinQuestIDs.Add(questID);
             activateQuests.Remove(quest);
-            questUI.UpdateQuestUI();
+
+            if (questUI == null) questUI = FindAnyObjectByType<QuestUI>();
+            questUI?.UpdateQuestUI();
         }
     }
 
@@ -101,7 +119,7 @@ public class QuestController : MonoBehaviour
         }
 
         //Verify we have items
-        Dictionary<int, int> itemCounts = InventoryController.Instance.GetItemCounts();
+        Dictionary<int, int> itemCounts = InventoryManager.Instance.GetItemCounts();
         foreach (var item in requiredItems)
         {
             if (itemCounts.GetValueOrDefault(item.Key) < item.Value)
@@ -114,7 +132,7 @@ public class QuestController : MonoBehaviour
         //Remove required items from inventory
         foreach (var itemRequirement in requiredItems)
         {
-            InventoryController.Instance.RemoveItemsFromInventory(itemRequirement.Key, itemRequirement.Value);
+            InventoryManager.Instance.RemoveItemsFromInventory(itemRequirement.Key, itemRequirement.Value);
         }
 
         return true;
