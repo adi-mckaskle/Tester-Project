@@ -53,13 +53,21 @@ public class NPC : MonoBehaviour
         string questID = dialogueData.quest.questID;
 
         //Future update add completing quest and handing in!
-        if (QuestController.Instance.IsQuestCompleted(questID) || QuestController.Instance.IsQuestHandedIn(questID))
+
+        if (QuestController.Instance.IsQuestHandedIn(questID))
         {
             questState = QuestState.Completed;
         }
         else if (QuestController.Instance.IsQuestActive(questID))
         {
-            questState = QuestState.InProgress;
+            if (QuestController.Instance.IsQuestCompleted(questID))
+            {
+                questState = QuestState.Completed;
+            }
+            else
+            {
+                questState = QuestState.InProgress;
+            }      
         }
         else
         {
