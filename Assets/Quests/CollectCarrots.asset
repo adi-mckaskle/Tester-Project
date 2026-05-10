@@ -23,5 +23,5 @@ MonoBehaviour:
     currentAmount: 0
   questRewards:
   - type: 0
-    rewardID: 3
+    rewardID: 7
     amount: 1

@@ -16,7 +16,7 @@ PrefabInstance:
     - target: {fileID: 4348518418015965932, guid: 7bf146f9067f12c409b7f2597fa486d9,
         type: 3}
       propertyPath: ID
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4348518418015965932, guid: 7bf146f9067f12c409b7f2597fa486d9,
         type: 3}
@@ -138,5 +138,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 899991388884207745, guid: 7bf146f9067f12c409b7f2597fa486d9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 215390815656976540}
   m_SourcePrefab: {fileID: 100100000, guid: 7bf146f9067f12c409b7f2597fa486d9, type: 3}
+--- !u!1 &764737247498159830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 899991388884207745, guid: 7bf146f9067f12c409b7f2597fa486d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 495832601844108887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &215390815656976540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764737247498159830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6781088f83390f741ae0d09a935a5401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BounceEffect
+  bounceHeight: 0.3
+  bounceDuration: 0.4
+  bounceCount: 2
