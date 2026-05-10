@@ -13,19 +13,22 @@ MonoBehaviour:
   m_Name: StoveDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Daisy
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 4072872022980983911, guid: 7c43f7d807fd27143a7531c5fab0c8b4,
+    type: 3}
   dialogueLines:
   - Here's the recipe card!
-  - This seems easy to make.
-  - I should go and gather ingredients!
-  - I got my ingredients! Let's do this!
+  - This seems pretty easy to make!
+  - I can gather some veggies from the garden... and go to the store to get the chicken
+    and pasta!
+  - I should go and gather my ingredients!
+  - I got my ingredients! Lets do this!
   - A little bit of this...
   - A little bit of that...
   - Add a pinch of rosemary...
   - And voila!
   - Let's bring this to Donnie!
-  autoProgressLines: 010100
-  endDialogueLines: 000001
+  autoProgressLines: 010101010101010100
+  endDialogueLines: 000000010000000001
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: {fileID: 0}
@@ -33,9 +36,9 @@ MonoBehaviour:
   choices:
   - dialogueIndex: 0
     choices:
-    - Grab the recipe card
+    - Grab card.
     nextDialogueIndexes: 01000000
     givesQuest: 0001
-  questInProgressIndex: 2
-  questCompletedIndex: 7
+  questInProgressIndex: 3
+  questCompletedIndex: 8
   quest: {fileID: 11400000, guid: fb3a8745ce435a948874559690e5806b, type: 2}
