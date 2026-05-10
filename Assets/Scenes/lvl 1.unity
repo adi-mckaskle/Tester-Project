@@ -6723,6 +6723,7 @@ GameObject:
   - component: {fileID: 1045029909}
   - component: {fileID: 1045029911}
   - component: {fileID: 1045029912}
+  - component: {fileID: 1045029913}
   m_Layer: 0
   m_Name: Stove
   m_TagString: Untagged
@@ -6870,6 +6871,19 @@ MonoBehaviour:
   happenOnlyOnce: 0
   filterByTag: 0
   filterTag: Player
+--- !u!114 &1045029913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045029908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec07c3a7c1b7b24419f4dc06894dd823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPC
+  dialogueData: {fileID: 11400000, guid: 8e48de837c913f54abae2f8dac1568ea, type: 2}
 --- !u!1 &1067420076
 GameObject:
   m_ObjectHideFlags: 0
@@ -12488,7 +12502,7 @@ PrefabInstance:
     - target: {fileID: 6642071036134149093, guid: a0cbb130e9ca73b4abc5336ebecf6cb2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.19
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 6642071036134149093, guid: a0cbb130e9ca73b4abc5336ebecf6cb2,
         type: 3}
@@ -13398,7 +13412,7 @@ GameObject:
   - component: {fileID: 2143491824}
   - component: {fileID: 2143491826}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: Donnie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
