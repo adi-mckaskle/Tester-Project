@@ -35,22 +35,27 @@ public class RewardsController : MonoBehaviour
 
     public void GiveItemReward(int itemID, int amount)
     {
-        var itemPrefab = FindAnyObjectByType<ItemDictionary>()?.GetItemPrefab(itemID);
+        bool added = InventoryManager.Instance.AddItem(itemID, amount);
 
-        if (itemPrefab == null) return;
-
-        for (int i = 0; i < amount; i++)
+        if (!added)
         {
-            if (!InventoryController.Instance.AddItem(itemPrefab))
+            GameObject itemPrefab = ItemDictionary.Instance.GetItemPrefab(itemID);
+            if (itemPrefab != null)
             {
                 GameObject dropItem = Instantiate(itemPrefab, transform.position + Vector3.down, Quaternion.identity);
-                dropItem.GetComponent<BounceEffect>().StartBounce();
-            }
-            else
-            {
-                itemPrefab.GetComponent<Item>().ShowPopUp();
-            }
+                dropItem.GetComponent<BounceEffect>()?.StartBounce();
 
+                if (dropItem.TryGetComponent(out Item itemScript))
+                {
+                    itemScript.quantity = amount;
+                }
+
+            }
+        }
+        else
+        {
+            GameObject itemPrefab = ItemDictionary.Instance.GetItemPrefab(itemID);
+            itemPrefab?.GetComponent<Item>()?.ShowPopUp();
         }
     }
 }
