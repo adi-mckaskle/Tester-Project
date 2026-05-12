@@ -8055,7 +8055,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1821544403}
+  - {fileID: 1696131354}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1045029912
@@ -8083,7 +8083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07f5c9545938e94f87c611c46c8df89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteractionTrigger
-  interactionMarker: {fileID: 1821544401}
+  interactionMarker: {fileID: 1696131352}
   interactKey: 101
   npcScript: {fileID: 1045029912}
   isPlayerInRange: 0
@@ -12207,7 +12207,7 @@ GameObject:
   - component: {fileID: 1696131354}
   - component: {fileID: 1696131353}
   m_Layer: 0
-  m_Name: InteractionMarker
+  m_Name: InteractionMarker (Stove)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12281,12 +12281,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696131352}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.57, y: 0.15, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.07000065, y: 1.2400002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2143491820}
+  m_Father: {fileID: 1045029910}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1708934956
 GameObject:
@@ -13074,7 +13074,7 @@ GameObject:
   - component: {fileID: 1821544403}
   - component: {fileID: 1821544402}
   m_Layer: 0
-  m_Name: InteractionMarker (1)
+  m_Name: InteractionMarker (Donnie)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13149,11 +13149,11 @@ Transform:
   m_GameObject: {fileID: 1821544401}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.6400003, y: 2.31, z: 0}
+  m_LocalPosition: {x: 0, y: 1.2199998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1045029910}
+  m_Father: {fileID: 2143491820}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1844604875
 GameObject:
@@ -15755,7 +15755,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1696131354}
+  - {fileID: 1821544403}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2143491822
@@ -15819,7 +15819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07f5c9545938e94f87c611c46c8df89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteractionTrigger
-  interactionMarker: {fileID: 1696131352}
+  interactionMarker: {fileID: 1821544401}
   interactKey: 101
   npcScript: {fileID: 2143491822}
   isPlayerInRange: 0
