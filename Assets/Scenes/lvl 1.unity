@@ -6721,6 +6721,8 @@ GameObject:
   - component: {fileID: 1045029910}
   - component: {fileID: 1045029909}
   - component: {fileID: 1045029911}
+  - component: {fileID: 1045029912}
+  - component: {fileID: 1045029913}
   m_Layer: 0
   m_Name: Stove
   m_TagString: Untagged
@@ -6832,7 +6834,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -6848,6 +6850,53 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.1539261, y: 2.0907524}
   m_EdgeRadius: 0
+--- !u!114 &1045029912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045029908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec07c3a7c1b7b24419f4dc06894dd823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPC
+  dialogueData: {fileID: 11400000, guid: 204c46dd62fa5144e9c0354cbf961501, type: 2}
+--- !u!114 &1045029913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045029908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810546aa5348745779a5772744036fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConditionArea
+  actions: []
+  useCustomActions: 1
+  customActions:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1045029912}
+        m_TargetAssemblyTypeName: NPC, Assembly-CSharp
+        m_MethodName: StartDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  happenOnlyOnce: 0
+  filterByTag: 0
+  filterTag: Player
+  frequency: 1
+  eventType: 0
 --- !u!1 &1067420076
 GameObject:
   m_ObjectHideFlags: 0
@@ -7202,14 +7251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 692a76087a389064dbe38daf58bf9c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestController
-  activateQuests:
-  - quest: {fileID: 11400000, guid: fb3a8745ce435a948874559690e5806b, type: 2}
-    objectives:
-    - objectiveID: 2
-      description: Collect garlic
-      type: 0
-      requiredAmount: 2
-      currentAmount: 0
+  activateQuests: []
   handinQuestIDs: []
 --- !u!1 &1155795479
 GameObject:

@@ -38,7 +38,7 @@ MonoBehaviour:
     choices:
     - Grab card.
     nextDialogueIndexes: 01000000
-    givesQuest: 0001
+    givesQuest: 0100
   questInProgressIndex: 3
   questCompletedIndex: 8
   quest: {fileID: 11400000, guid: fb3a8745ce435a948874559690e5806b, type: 2}
