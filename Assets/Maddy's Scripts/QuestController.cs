@@ -54,15 +54,16 @@ public class QuestController : MonoBehaviour
         {
             foreach (QuestObjective questObjective in quest.objectives)
             {
+                //only check 'CollectItem' objectives
                 if (questObjective.type != ObjectiveType.CollectItem) continue;
-                if (!int.TryParse(questObjective.objectiveID, out int itemID)) continue;
+
+                //convert the string id from inspector to a number
+                if (!int.TryParse(questObjective.objectiveID, out int itemID))
                 {
-                    Debug.LogWarning($"Quest {quest.QuestID} has a non-numeric ObjectiveID: {questObjective.objectiveID}");
+                    Debug.LogWarning($"Quest {quest.QuestID} failed! The ID is currently: [{questObjective.objectiveID}]");
                     continue;
                 }
-
-                Debug.Log($"Checking Inventory for Item ID: {itemID}. Found in Inv: {InventoryManager.Instance.GetTotalQuantity(itemID)}");
-
+                
                 int newAmount = itemCounts.TryGetValue(itemID, out int count) ? Mathf.Min(count, questObjective.requiredAmount) : 0;
 
                 if (questObjective.currentAmount != newAmount)
@@ -102,7 +103,6 @@ public class QuestController : MonoBehaviour
             questUI?.UpdateQuestUI();
         }
     }
-
     public bool IsQuestHandedIn(string questID)
     {
         return handinQuestIDs.Contains(questID);

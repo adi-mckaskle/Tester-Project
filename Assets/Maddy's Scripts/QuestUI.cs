@@ -29,7 +29,9 @@ public class QuestUI : MonoBehaviour
         foreach(var quest in QuestController.Instance.activateQuests)
         {
             GameObject entry = Instantiate(questEntryPrefab, questListContent);
+           
             TMP_Text questNameText = entry.transform.Find("QuestNameText").GetComponent<TMP_Text>();
+            
             Transform objectiveList = entry.transform.Find("ObjectiveList");
 
             questNameText.text = quest.quest.name;

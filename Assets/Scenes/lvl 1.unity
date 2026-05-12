@@ -605,7 +605,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemDictionary
   itemPrefabs:
-  - {fileID: 5793878661223852922, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
   - {fileID: -8290949107460854826, guid: a0cbb130e9ca73b4abc5336ebecf6cb2, type: 3}
   - {fileID: 2604995136230943775, guid: decc43060a0db3142afd9455135e98be, type: 3}
   - {fileID: 4340152331809216992, guid: 4294d12642c8dce4891418f773580aa7, type: 3}
@@ -7203,7 +7202,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 692a76087a389064dbe38daf58bf9c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestController
-  activateQuests: []
+  activateQuests:
+  - quest: {fileID: 11400000, guid: fb3a8745ce435a948874559690e5806b, type: 2}
+    objectives:
+    - objectiveID: 2
+      description: Collect garlic
+      type: 0
+      requiredAmount: 2
+      currentAmount: 0
   handinQuestIDs: []
 --- !u!1 &1155795479
 GameObject:

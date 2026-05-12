@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8fe5cea9a080b499920c248901cad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  ID: 5
+  ID: 6
   Name: Chicken Noodle Soup
   quantity: 1
 --- !u!114 &4455319161020295135
