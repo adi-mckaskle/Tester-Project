@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8d29c3f8d363847a1d3830a55ea7b1, type: 3}
   m_Name: MakeSoup
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  questID: Make Chicken Noodle Soup6db6b73b-0278-42aa-b3f7-5f072a111ba8
+  questID: Make Chicken Noodle Soup8a434325-5128-4e1e-93ff-8721c865605f
   questName: Make Chicken Noodle Soup
   description: It's time for supper and soup is on the menu!
   objectives:

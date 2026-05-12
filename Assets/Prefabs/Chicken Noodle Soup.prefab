@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   ID: 6
-  Name: Chicken Noodle Soup
+  Name: Chicken Noodle
   quantity: 1
 --- !u!114 &4455319161020295135
 MonoBehaviour:

@@ -36,6 +36,13 @@ public class NPC : MonoBehaviour
         else if (questState == QuestState.Completed)
         {
             dialogueIndex = dialogueData.questCompletedIndex;
+
+            //trigger quest completion here
+            if (dialogueData.quest != null && !QuestController.Instance.IsQuestHandedIn(dialogueData.quest.questID));
+            {
+                Debug.Log($"[NPC] {gameObject.name} detected quest is ready for hand-in. Triggering rewards and removal.");
+                HandleQuestCompletion(dialogueData.quest);
+            }
         }
 
         // dialogueIndex = 0;
@@ -167,10 +174,15 @@ public class NPC : MonoBehaviour
 
     public void EndDialogue()
     {
-        if (questState == QuestState.Completed && !QuestController.Instance.IsQuestHandedIn(dialogueData.quest.questID))
+        if (dialogueData.quest != null && questState == QuestState.Completed && !QuestController.Instance.IsQuestHandedIn(dialogueData.quest.questID))
         {
             HandleQuestCompletion(dialogueData.quest);
         }
+
+        //if (questState == QuestState.Completed && !QuestController.Instance.IsQuestHandedIn(dialogueData.quest.questID))
+        //{
+        //    HandleQuestCompletion(dialogueData.quest);
+        //}
 
         StopAllCoroutines();
         dialogueUI.SetDialogueText("");
@@ -180,6 +192,7 @@ public class NPC : MonoBehaviour
     void HandleQuestCompletion(Quest quest)
     {
         RewardsController.Instance.GiveQuestReward(quest);
+        
         QuestController.Instance.HandInQuest(quest.questID);
     }
 }

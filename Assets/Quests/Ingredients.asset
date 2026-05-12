@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d8d29c3f8d363847a1d3830a55ea7b1, type: 3}
-  m_Name: GatherIngredients
+  m_Name: Ingredients
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  questID: G1c914606-9d68-4878-9d3b-e8a7b6093b33
-  questName: Gather Ingriedients
-  description: Soup
+  questID: C7d677c53-8dc4-4afd-8e88-765bbb2eb422
+  questName: CollectIngredients
+  description: Collect items to make soup
   objectives:
-  - objectiveID: 0
+  - objectiveID: 1
     description: Collect 5 Carrots
     type: 0
     requiredAmount: 5
-    currentAmount: 0
-  - objectiveID: 2
-    description: Collect 1 Clove of Garlic
-    type: 0
-    requiredAmount: 1
     currentAmount: 0
   - objectiveID: 3
     description: Collect 3 Ribs of Celery
     type: 0
     requiredAmount: 3
     currentAmount: 0
+  - objectiveID: 2
+    description: Collect 1 Clove of Garlic
+    type: 0
+    requiredAmount: 1
+    currentAmount: 0
   questRewards:
   - type: 0
-    rewardID: 5
+    rewardID: 6
     amount: 1

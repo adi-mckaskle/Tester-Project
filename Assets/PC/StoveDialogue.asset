@@ -27,8 +27,8 @@ MonoBehaviour:
   - Add a pinch of rosemary...
   - And voila!
   - Let's bring this to Donnie!
-  autoProgressLines: 010101010101010100
-  endDialogueLines: 000000010000000001
+  autoProgressLines: 01010101010101010100
+  endDialogueLines: 00000001000000000001
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: {fileID: 0}
@@ -40,5 +40,5 @@ MonoBehaviour:
     nextDialogueIndexes: 01000000
     givesQuest: 0100
   questInProgressIndex: 3
-  questCompletedIndex: 8
-  quest: {fileID: 11400000, guid: fb3a8745ce435a948874559690e5806b, type: 2}
+  questCompletedIndex: 4
+  quest: {fileID: 11400000, guid: f4eddce64edce704bba8a646e8c320d1, type: 2}

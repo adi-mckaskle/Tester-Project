@@ -111,7 +111,11 @@ public class QuestController : MonoBehaviour
     public bool RemoveRequiredItemsFromInventory(string questID)
     {
         QuestProgress quest = activateQuests.Find(q => q.QuestID == questID);
-        if (quest == null) return false;
+        if (quest == null)
+        {
+            Debug.LogError("Hand-in failed: Quest ID not found in Active Quests!");
+            return false;
+        }
 
         Dictionary<int, int> requiredItems = new();
 
@@ -130,10 +134,14 @@ public class QuestController : MonoBehaviour
         {
             if (itemCounts.GetValueOrDefault(item.Key) < item.Value)
             {
+                Debug.LogWarning($"Hand-in failed: Missing Item ID {item.Key}. Have: {itemCounts.GetValueOrDefault(item.Key)} Need: {item.Value}");
+
                 //Not enough items to complete quest
                 return false;
             }
         }
+
+        Debug.Log("Items validated! Starting removal...");
 
         //Remove required items from inventory
         foreach (var itemRequirement in requiredItems)
