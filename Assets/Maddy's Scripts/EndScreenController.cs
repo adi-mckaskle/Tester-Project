@@ -1,16 +1,21 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndScreenController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void RestartLevel()
     {
-        
-    }
+        Time.timeScale = 1f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //if (InventoryManager.Instance != null) // 5
+        //{
+        //    InventoryManager.Instance.ResetInventory(); // 6
+        //}
+        //if (QuestController.Instance != null)
+        //{
+        //    QuestController.Instance.ResetQuest();
+        //}
+
+        SceneManager.LoadScene(1);
     }
 }

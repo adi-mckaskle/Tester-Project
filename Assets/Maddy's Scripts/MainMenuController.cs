@@ -1,16 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; //1
 
 public class MainMenuController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void StartGame()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //if (InventoryManager.Instance != null) InventoryManager.Instance.ResetInventory();
+        // If you have a ResetQuests() in your QuestController, call it here too.
+        SceneManager.LoadScene(1);
     }
 }
