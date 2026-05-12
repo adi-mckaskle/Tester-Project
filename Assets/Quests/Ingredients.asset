@@ -35,3 +35,6 @@ MonoBehaviour:
   - type: 0
     rewardID: 6
     amount: 1
+  - type: 0
+    rewardID: 6
+    amount: 1
