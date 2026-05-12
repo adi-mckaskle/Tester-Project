@@ -38,7 +38,7 @@ public class NPC : MonoBehaviour
             dialogueIndex = dialogueData.questCompletedIndex;
 
             //trigger quest completion here
-            if (dialogueData.quest != null && !QuestController.Instance.IsQuestHandedIn(dialogueData.quest.questID));
+            if (dialogueData.quest != null && !QuestController.Instance.IsQuestHandedIn(dialogueData.quest.questID))
             {
                 Debug.Log($"[NPC] {gameObject.name} detected quest is ready for hand-in. Triggering rewards and removal.");
                 HandleQuestCompletion(dialogueData.quest);
