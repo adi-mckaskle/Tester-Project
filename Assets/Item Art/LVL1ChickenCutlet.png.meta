@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dbb9f2eea2b614c5288337928fd16236
+guid: d56cc6d7d0e78f948b8f165e8334e9ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1065639743344870668
-    second: ChickenCutlet_0
+      213: 7765577131080946831
+    second: ChickenCutlet 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 900
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChickenCutlet_0
+      name: ChickenCutlet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4faf367ac461631f0800000000000000
-      internalID: -1065639743344870668
+      spriteID: f841af5c14fd4cb60800000000000000
+      internalID: 7765577131080946831
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChickenCutlet_0: -1065639743344870668
+      ChickenCutlet 1_0: 7765577131080946831
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
