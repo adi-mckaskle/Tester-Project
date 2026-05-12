@@ -56,6 +56,12 @@ public class QuestController : MonoBehaviour
             {
                 if (questObjective.type != ObjectiveType.CollectItem) continue;
                 if (!int.TryParse(questObjective.objectiveID, out int itemID)) continue;
+                {
+                    Debug.LogWarning($"Quest {quest.QuestID} has a non-numeric ObjectiveID: {questObjective.objectiveID}");
+                    continue;
+                }
+
+                Debug.Log($"Checking Inventory for Item ID: {itemID}. Found in Inv: {InventoryManager.Instance.GetTotalQuantity(itemID)}");
 
                 int newAmount = itemCounts.TryGetValue(itemID, out int count) ? Mathf.Min(count, questObjective.requiredAmount) : 0;
 

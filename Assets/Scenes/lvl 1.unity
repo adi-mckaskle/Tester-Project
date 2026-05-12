@@ -605,6 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemDictionary
   itemPrefabs:
+  - {fileID: 5793878661223852922, guid: e205fdcb17025ef469a8a77f9d259711, type: 3}
   - {fileID: -8290949107460854826, guid: a0cbb130e9ca73b4abc5336ebecf6cb2, type: 3}
   - {fileID: 2604995136230943775, guid: decc43060a0db3142afd9455135e98be, type: 3}
   - {fileID: 4340152331809216992, guid: 4294d12642c8dce4891418f773580aa7, type: 3}
@@ -1640,7 +1641,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1081850859}
   - {fileID: 1073004622}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6722,8 +6722,6 @@ GameObject:
   - component: {fileID: 1045029910}
   - component: {fileID: 1045029909}
   - component: {fileID: 1045029911}
-  - component: {fileID: 1045029912}
-  - component: {fileID: 1045029913}
   m_Layer: 0
   m_Name: Stove
   m_TagString: Untagged
@@ -6839,7 +6837,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.26340377, y: 0.50356686}
+  m_Offset: {x: 0.26340377, y: 0.23181689}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6849,53 +6847,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.1539261, y: 2.6342523}
+  m_Size: {x: 2.1539261, y: 2.0907524}
   m_EdgeRadius: 0
---- !u!114 &1045029912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045029908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdab9334f9a2a4efe8c019b5d37595cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ConditionCollision
-  actions: []
-  useCustomActions: 1
-  customActions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1045029913}
-        m_TargetAssemblyTypeName: NPC, Assembly-CSharp
-        m_MethodName: StartDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  happenOnlyOnce: 0
-  filterByTag: 0
-  filterTag: Player
---- !u!114 &1045029913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045029908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec07c3a7c1b7b24419f4dc06894dd823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPC
-  dialogueData: {fileID: 11400000, guid: 204c46dd62fa5144e9c0354cbf961501, type: 2}
 --- !u!1 &1067420076
 GameObject:
   m_ObjectHideFlags: 0
@@ -7037,55 +6990,6 @@ MonoBehaviour:
   portraitImage: {fileID: 393932865}
   choiceContainer: {fileID: 1708934957}
   choiceButtonPrefab: {fileID: 2370228432621130041, guid: 9eb425100d419e348ae23641cf69f20e,
-    type: 3}
---- !u!1 &1081850858
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1081850859}
-  - component: {fileID: 1081850860}
-  m_Layer: 0
-  m_Name: QuestUIController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1081850859
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081850858}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 285228298}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1081850860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081850858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77555b5557c0b0546ac5e17640ffd8b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuestUI
-  questListContent: {fileID: 1095333113}
-  questEntryPrefab: {fileID: 7018591656411423087, guid: d5c517ed7e4e5504caa4b2e04565beb3,
-    type: 3}
-  objectiveTextPrefab: {fileID: 5085663704888178512, guid: 503c884cc600f35468bb903c9c505fc0,
     type: 3}
 --- !u!1 &1090169443
 GameObject:
@@ -12547,6 +12451,7 @@ GameObject:
   - component: {fileID: 2060471555}
   - component: {fileID: 2060471557}
   - component: {fileID: 2060471556}
+  - component: {fileID: 2060471558}
   m_Layer: 5
   m_Name: Quest
   m_TagString: Untagged
@@ -12612,6 +12517,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060471554}
   m_CullTransparentMesh: 1
+--- !u!114 &2060471558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060471554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77555b5557c0b0546ac5e17640ffd8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestUI
+  questListContent: {fileID: 1095333113}
+  questEntryPrefab: {fileID: 7018591656411423087, guid: d5c517ed7e4e5504caa4b2e04565beb3,
+    type: 3}
+  objectiveTextPrefab: {fileID: 5085663704888178512, guid: 503c884cc600f35468bb903c9c505fc0,
+    type: 3}
 --- !u!1 &2079354557
 GameObject:
   m_ObjectHideFlags: 0
