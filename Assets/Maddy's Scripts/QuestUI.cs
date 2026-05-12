@@ -10,13 +10,15 @@ public class QuestUI : MonoBehaviour
     public GameObject objectiveTextPrefab;
 
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
         UpdateQuestUI();
     }
 
     public void UpdateQuestUI()
     {
+        if (QuestController.Instance == null) return;
+
         //Destroy existing quest entries
         foreach(Transform child in questListContent)
         {
@@ -27,7 +29,9 @@ public class QuestUI : MonoBehaviour
         foreach(var quest in QuestController.Instance.activateQuests)
         {
             GameObject entry = Instantiate(questEntryPrefab, questListContent);
+           
             TMP_Text questNameText = entry.transform.Find("QuestNameText").GetComponent<TMP_Text>();
+            
             Transform objectiveList = entry.transform.Find("ObjectiveList");
 
             questNameText.text = quest.quest.name;
@@ -36,6 +40,7 @@ public class QuestUI : MonoBehaviour
             {
                 GameObject objTextGO = Instantiate(objectiveTextPrefab, objectiveList);
                 TMP_Text objText = objTextGO.GetComponent<TMP_Text>();
+                
                 objText.text = $"{objective.description} ({objective.currentAmount}/{objective.requiredAmount})"; //Collect 5 Potions (0/5)
             }
         }
