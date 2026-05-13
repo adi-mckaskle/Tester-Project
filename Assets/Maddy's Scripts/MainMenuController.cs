@@ -5,8 +5,15 @@ public class MainMenuController : MonoBehaviour
 {
     public void StartGame()
     {
-        //if (InventoryManager.Instance != null) InventoryManager.Instance.ResetInventory();
-        // If you have a ResetQuests() in your QuestController, call it here too.
+        // 1. Tell the Managers to wipe their data
+        if (QuestController.Instance != null)
+            QuestController.Instance.ResetQuests();
+
+        if (InventoryManager.Instance != null)
+            InventoryManager.Instance.ResetInventory();
+
+        // 2. Reset time scale in case the Win Screen paused it
+        Time.timeScale = 1f;
         SceneManager.LoadScene(1);
     }
 }

@@ -36,6 +36,13 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void ResetInventory()
+    {
+        InitializeInventory(); // Resets all slots to -1 itemID
+        OnInventoryUpdated?.Invoke();
+        Debug.Log("InventoryManager: All items cleared.");
+    }
+
     private void InitializeInventory()
     {
         slots.Clear();
