@@ -31,6 +31,17 @@ public class QuestController : MonoBehaviour
         }
     }
 
+    public void ResetQuests()
+    {
+        activateQuests.Clear();
+        handinQuestIDs.Clear();
+
+        if (questUI == null) questUI = FindAnyObjectByType<QuestUI>();
+        questUI?.UpdateQuestUI();
+
+        Debug.Log("QuestController: All progress wiped.");
+    }
+
     public void AcceptQuest(Quest quest)
     {
         if (IsQuestActive(quest.questID)) return;
@@ -151,4 +162,6 @@ public class QuestController : MonoBehaviour
 
         return true;
     }
+
+
 }
